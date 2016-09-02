@@ -1,10 +1,10 @@
 package diceGames;
 /*
  * This program is part of my learning Java series
- * This one looks at an introduction to classes
+ * This one looks at an constructors and overloading
  * 
  * Find the blog here,
- * http://testsheepnz.blogspot.co.nz/2016/09/java-12-introducing-classes.html
+ * http://testsheepnz.blogspot.co.nz/2016/09/java-13-constructors-and-overloading.html
  * 
  * For more information - please reread.
  * 
@@ -22,7 +22,6 @@ public class diceClass {
 	//Attributes
 	private int numSides;
 	private int diceRollValue;
-	private boolean IsThePopeCatholic = true;
 	
 	//Constructors
 	
@@ -36,14 +35,6 @@ public class diceClass {
 	{
 		this(6);
 	}
-	
-	/* Original default class
-	public diceClass()
-	{
-		System.out.println("DEFAULT CONSTRUCTOR");
-		this.numSides = 6;
-	}*/
-	
 	
 	//Methods
 
