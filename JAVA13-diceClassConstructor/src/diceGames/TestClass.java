@@ -18,23 +18,22 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class testClass {
+public class TestClass {
 
 	
 	@Test
 	public void testD20()
 	{
-		diceClass dice1 = new diceClass(20);
+		DiceClass dice1 = new DiceClass(20);
 		
 		for (int count=0 ; count < 20 ; count ++)
-			dice1.rollDice();
-		
+			dice1.rollDice();		
 	}
 	
 	@Test
 	public void testDefault()
 	{
-		diceClass dice1 = new diceClass();
+		DiceClass dice1 = new DiceClass();
 		
 		for (int count=0 ; count < 20 ; count ++)
 			dice1.rollDice();

@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class diceClass {
+public class DiceClass {
 
 	//Attributes
 	private int numSides;
@@ -25,13 +25,13 @@ public class diceClass {
 	
 	//Constructors
 	
-	public diceClass(int sides)
+	public DiceClass(int sides)
 	{
-		System.out.println("CONSTRUCTOR called with sides of " + sides);
+		System.out.println("BASE CLASS: CONSTRUCTOR called with sides of " + sides);
 		this.numSides = sides;
 	}
 	
-	public diceClass()
+	public DiceClass()
 	{
 		this(6);
 	}
@@ -43,44 +43,56 @@ public class diceClass {
 	{
 		diceRollValue = 1 + (int)(Math.random() * numSides);
 		
-		System.out.println("Rolled the number " + diceRollValue);
+		System.out.println("BASE CLASS: Rolled the number " + diceRollValue);
 		return this.diceRollValue;
 	}
 	
 	
 	public void setNumSides (int sides)
 	{
-		System.out.println("Set number of sides as " + sides);
+		System.out.println("BASE CLASS: Set number of sides as " + sides);
 		this.numSides = sides;
 	}
 	
-	public int diceValue ()
+	public int getDiceValue ()
 	{
 		return diceRollValue;
 	}
 	
-	public int diceOnOrUnder (int threshold)
-	{
-		if (diceRollValue <= threshold)
-			return 1;
-		else
-			return 0;
-	}
-	
-	public int diceOnOrOver (int threshold)
+	public boolean diceOnOrUnder (int threshold)
 	{
 		if (diceRollValue >= threshold)
-			return 1;
+		{
+			return true;
+		}
 		else
-			return 0;
+		{
+			return false;
+		}
 	}
 	
-	public int diceEquals (int target)
+	public boolean diceOnOrOver (int threshold)
+	{
+		if (diceRollValue >= threshold)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public boolean diceEquals (int target)
 	{
 		if (diceRollValue == target)
-			return 1;
+		{
+			return true;
+		}
 		else
-			return 0;
+		{
+			return false;
+		}
 	}	
 	
 
